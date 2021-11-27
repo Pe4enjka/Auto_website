@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+</head>
+<body>
+	<div class="sidebar">
+        <div class="logo">VAG</div>
+		<div class="nav">
+            <ul>
+				<li class="home"><a href = 'prev'>VIN</a></li>
+				<li class="about"><a href = 'about'>About Company</a></li>
+				<li class="vin"><a href = 'create'>Add VIN</a></li>
+				<li class="cont"><a href = 'admin'>Admin</a></li>
+            </ul>
+        </div>
+    </div>
+<!--    </div>-->
+<!--    <hr class="line"></hr>-->
+
+    <div class="container">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>

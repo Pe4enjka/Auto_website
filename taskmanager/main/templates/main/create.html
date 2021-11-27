@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+ADD VIN
+{% endblock %}
+
+{% block content %}
+    <p class="add">Add VIN</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+        <button type="submit" class="btn btn-success">Add</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <p class="add">Reporting VIN number</p>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="alert alert-warning mt-3">
+                <p>{{ el.title }}</p>
+                <p>{{ el.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No actual VIN</p>
+    {% endif %}
+{% endblock %}
